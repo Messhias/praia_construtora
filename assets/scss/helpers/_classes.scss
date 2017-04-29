@@ -1,0 +1,379 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// IDs
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#slider { position: relative; z-index: 1;
+  .flexslider { @include box-shadow(none); @include border-radius(0px); height: 750px; overflow: hidden; border: none; margin: 0; position: relative;
+    &:hover {
+      .flex-direction-nav {
+        .flex-next, .flex-prev { @include opacity(1); }
+        }
+    }
+    &.fixed { position: fixed; }
+    .slides { height: 100%; list-style: none; padding: 0;
+      .slide { height: 100%;
+        video { width: 100%; }
+        img { display: block; }
+      }
+    }
+    .flex-direction-nav { list-style: none; height: 100%; width: 100%;  top: 0;
+      .flex-next, .flex-prev { @include transition(.4s); @include opacity(0); background-color: rgba(0,0,0,.0); height: 50px; width: 50px; position: absolute; z-index: 10; bottom: 0; top: 0; margin: auto;
+        &:hover { background-color: rgba(0,0,0,.3); }
+        &:before { display: none; }
+        //&:after { @include font-awesome; color: $color-grey-dark; font-size: 16px; position: absolute; right: 11px; top: 6px; z-index: 2; }
+        &:after { @include font-awesome; color: #fff; font-size: 48px; position: absolute; right: 15px; top: 0px; z-index: 2; }
+      }
+      .flex-next { right: 10px;
+        &:after { content: "\f105"; }
+      }
+      .flex-prev { left: 10px;
+        &:after { content: "\f104"; right: 16px; }
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Universal Classes
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.background-color-grey-light { background-color: $color-grey-light; }
+.background-color-grey-dark { background-color: $color-grey-dark;
+  a { color: #fff;
+    &:hover { color: $color-default; }
+  }
+}
+
+.has-dark-background { color: #fff; }
+
+.navigation-hide { @include opacity(0); @include transition(.4s); }
+.navigation-show { @include opacity(1); @include transition(.4s); }
+
+.width-10 { width: 10%; }
+.width-20 { width: 20%; }
+.width-30 { width: 30%; }
+.width-40 { width: 40%; }
+.width-50 { width: 50%; }
+.width-60 { width: 60%; }
+.width-70 { width: 70%; }
+.width-80 { width: 80%; }
+.width-90 { width: 90%; }
+.width-100 { width: 100%; }
+
+.top-0 { margin-top: 0; background-color: $color-grey-light; position: relative; }
+.top-10 { margin-top: 10px; background-color: $color-grey-light; position: relative; }
+.top-20 { margin-top: 20px; background-color: $color-grey-light; position: relative; }
+.top-30 { margin-top: 30px; background-color: $color-grey-light; position: relative; }
+.top-40 { margin-top: 40px; background-color: $color-grey-light; position: relative; }
+.top-50 { margin-top: 50px; background-color: $color-grey-light; position: relative; }
+.top-60 { margin-top: 60px; background-color: $color-grey-light; position: relative; }
+.top-70 { margin-top: 70px; background-color: $color-grey-light; position: relative; }
+.top-80 { margin-top: 80px; background-color: $color-grey-light; position: relative; }
+.top-90 { margin-top: 90px; background-color: $color-grey-light; position: relative; }
+.top-100 { margin-top: 100px; background-color: $color-grey-light; position: relative; }
+.top-110 { margin-top: 110px; background-color: $color-grey-light; position: relative; }
+.top-120 { margin-top: 120px; background-color: $color-grey-light; position: relative; }
+.top-130 { margin-top: 130px; background-color: $color-grey-light; position: relative; }
+.top-140 { margin-top: 140px; background-color: $color-grey-light; position: relative; }
+.top-150 { margin-top: 150px; background-color: $color-grey-light; position: relative; }
+.top-160 { margin-top: 160px; background-color: $color-grey-light; position: relative; }
+.top-170 { margin-top: 170px; background-color: $color-grey-light; position: relative; }
+.top-180 { margin-top: 180px; background-color: $color-grey-light; position: relative; }
+.top-190 { margin-top: 190px; background-color: $color-grey-light; position: relative; }
+.top-200 { margin-top: 200px; background-color: $color-grey-light; position: relative; }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Classes
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/****
+  A
+****/
+
+// Agent
+
+.agent {
+  .agent-id { display: table; margin-bottom: 20px;
+    h4 { margin-top: 0; }
+    img { float: left; }
+    .agent-wrapper { padding-left: 100px; }
+  }
+}
+
+/****
+  B
+****/
+
+// Block
+
+.block { padding: 40px 0; }
+
+// Box
+
+.box { display: table; //background-color: $color-grey-dark;
+  .empty-space { background-color: $color-grey-light; }
+  .image { background-color: $color-grey-light; display: inline-block;
+    img { max-width: 100%; }
+  }
+  .description { display: inline-block; background-color: $color-grey-light;
+    .description-wrapper { background-color: $color-grey-dark; color: #fff; display: inline-block; padding: 30px;
+      h3 {
+        &:after { display: none; }
+      }
+      p { margin-bottom: 20px; }
+    }
+  }
+}
+
+#count-down { position: absolute; top: 0px; left: 0px; z-index: 3; margin: auto; height: 480px; bottom: 0px; right: 0px; text-align: center;
+  .background { background-color: darken($color-default, 5%); }
+  h2 { color: #fff; margin-bottom: 60px;
+    &:after { display: none; }
+  }
+  h3 { color: #fff; margin-top: 20px;
+    &:after { display: none; }
+  }
+}
+.count-down {
+  > div { display: block !important; height: 100% !important; width: 100% !important; position: relative !important; margin-bottom: 30px !important;
+    canvas { width: 100% !important; }
+    input { bottom: 0 !important; font-family: inherit !important; color: #fff !important; font-size: 60px !important; font-weight: normal !important; left: 0 !important; right: 0 !important; top: -85px !important; margin: auto !important; margin: auto !important; }
+  }
+}
+
+/****
+  D
+****/
+
+// Disable Slider submit button after click
+
+.disable-submit-button { @include opacity(0); pointer-events: none; cursor: default; }
+
+
+/****
+  N
+****/
+
+// Navigation
+
+.navigation { @include box-shadow(0px 2px 2px rgba(0,0,0,.2)); background-color: #fff; position: absolute; width: 100%; z-index: 99;
+  &.fixed { position: fixed; width: 100%; }
+  .navbar-collapse { padding-right: 0; }
+  .navbar { margin-bottom: 0; min-height: inherit; padding: 15px 0;
+    .navbar-brand { height: inherit; line-height: 0; padding: 0; }
+    .navbar-nav {
+      li {
+        &.active {
+          a { color: $color-default; }
+        }
+        a { color: $color-grey-dark; line-height: 0;  margin: 0;
+          &:hover { background-color: transparent; color: $color-default; }
+          &:active, &:focus { background-color: transparent; }
+        }
+      }
+    }
+  }
+}
+
+/****
+  F
+****/
+
+// Feature box
+
+.feature-box {
+  h4 { margin: 15px 0; }
+}
+
+// Features List
+
+.features-list { padding-left: 0;
+  li { font-size: 18px; list-style: none; padding: 10px 0;
+    &:before { @include font-awesome; color: $color-default; content: "\f05d"; font-size: 24px;  margin-right: 15px; position: relative; top: 2px; }
+  }
+}
+
+// Footer
+
+#footer { background-color: darken($color-grey-dark, 5%); color: #fff; padding: 20px 0; }
+
+// Form Slider Status
+
+#form-slider-status { position: absolute; text-align: center; width: 100%; padding: 20px 0; }
+
+/****
+  I
+****/
+
+// Image Carousel
+
+.image-carousel { height: auto; overflow: hidden; padding-bottom: 40px;
+  img { max-width: 100%; }
+  p { margin-bottom: 20px; }
+  .image-carousel-slide {
+    .image-carousel-slide-wrapper { display: table;
+      .inner { display: table-cell; vertical-align: middle; }
+    }
+  }
+  .owl-buttons { bottom: 0px; position: absolute; right: 0px;
+    .owl-prev, .owl-next { @include transition(.3s); background-color: $color-default; display: inline-block; height: 30px; width: 30px; position: relative;
+      &:after { @include font-awesome; color: #fff; display: inline-block; font-size: 16px; position: absolute; padding: 7px 13px; }
+      &:hover { background-color: darken($color-default, 3%); }
+    }
+    .owl-next { margin-left: 2px;
+      &:after { content: "\f105"; }
+    }
+    .owl-prev {
+      &:after { content: "\f104"; }
+    }
+  }
+}
+
+.infobox-wrapper {
+  > img { @include opacity(.5); @include transition(.4s); position: absolute !important; right: 10px; top: 10px; z-index: 2;
+    &:hover { @include opacity(1); }
+  }
+  .infobox-inner { @include box-shadow(0px 2px 2px rgba(0,0,0,.2)); border: 10px solid $color-grey-light; font-size:12px; position: relative; margin-bottom: 60px;
+    &:after { width: 0px; height: 0px; border-style: solid; border-width: 6px 6px 0 6px; border-color: $color-grey-light transparent transparent transparent; position: absolute; left: 103px; content: ""; bottom: -16px; }
+    .infobox-image { width: 220px;  height: auto; overflow: hidden; position: relative;
+      &:after { display: block; content: ""; position: absolute; width: 100%; height: 100%; top: 0; }
+      img { width: 100%; }
+      .infobox-price { background-color: $color-grey-dark; color: #fff; font-size: 14px; font-weight: bold; padding: 10px; position: absolute; bottom: 0px; z-index: 2; }
+    }
+    .infobox-title { font-size: 14px; font-weight: bold;
+      a { color: ble; }
+    }
+    .infobox-description { background-color: #fff; padding: 8px; }
+    .infobox-location { @include opacity(.5); font-size: 12px; }
+    .fa { color: $color-default; float: right; font-size: 18px; margin-top: 4px;  }
+  }
+}
+
+/****
+  L
+****/
+
+// Loading
+
+#loading-icon { bottom: 0; font-size: 30px; height: 50px; left: 0; margin: auto; padding-top: 60px; position: absolute; right: 0; top: 0; width: 50px; z-index: 5; }
+
+.loading {
+  &:before { background-color: #fff; content: ""; height: 100%; left: 0; width: 100%; position: absolute; top: 0; z-index: 4; }
+}
+
+// Logos
+
+.logos { display: block; line-height: 0; margin-top: 10px; padding: 0 30px; text-align: justify;
+  &:after { content: ''; display: inline-block; width: 100%;}
+  .logo { display: inline-block; margin-bottom: 7px; position: relative;
+    a { @include transition(.3s); @include opacity(.8); padding: 10px;
+      &:hover { @include opacity(1); }
+    }
+  }
+}
+
+/****
+  M
+****/
+
+//  Map
+
+#map { height: 750px;
+  //&.loaded {
+  //  &:before, &:after { @include opacity(0); }
+  //}
+}
+
+.marker-style {
+//.marker-style { border: 4px solid $color-default; width: 24px; height: 24px; border-radius: 50%; margin-left: -12px !important; margin-top: -44px !important;
+  img { position: absolute !important; top: -1px !important; bottom: 0px !important; right: 0px; left: 0px; margin: auto !important; }
+}
+
+.mfp-close {
+  &:hover, &:active, &:focus { background-color: transparent; }
+}
+
+/****
+  P
+****/
+
+// Property
+
+.property-wrapper { background-color: $color-grey-light; margin-bottom: 20px; padding: 15px;
+  .property { background-color: #fff;
+    .image-wrapper { position: relative;
+      &:after { @include opacity(0); @include transition(.4s); background-color: $color-grey-dark; content: ""; height: 100%; left: 0; position: absolute; width: 100%; top: 0; }
+      &:before { @include opacity(0); @include scale(1.2); @include transition(.4s); @include font-awesome; content: "\f00e"; color: #fff; font-size: 36px; height: 30px; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; width: 30px; z-index: 4; }
+      &:hover {
+        &:after { @include opacity(.2); }
+        &:before { @include opacity(.9); @include scale(1); }
+      }
+      img { max-width: 100%; }
+    }
+    header { background-color: $color-grey-dark; color: #fff; padding: 10px;
+      h4 { margin-bottom: 0; margin-top: 0; }
+    }
+    .description { padding: 10px;
+      dl { margin-bottom: 0;
+        dt { float: left; }
+        dd { border-bottom: 1px solid $color-grey-light; margin-bottom: 3px; padding-bottom: 3px; text-align: right;
+          &:last-child { border: none; }
+        }
+      }
+    }
+  }
+}
+
+/****
+  S
+****/
+
+// Slider banner
+
+.slider-banner { background-color: $color-grey-dark; color: #fff; padding: 35px 0;
+  .title { position: relative;
+    h2 { margin-bottom: 0px; margin-top: 0; }
+    i { color: $color-default; font-size: 30px; position: absolute; top: 0; bottom: 0; margin: auto; height: 30px; right: 0; }
+    .subtitle { @include opacity(.8); }
+  }
+}
+
+// Subtitle (under slider banner)
+
+.subtitle { font-size: 18px; }
+
+/****
+  T
+****/
+
+// Testimonial carousel
+
+blockquote { border: none; display: table; margin-bottom: 0; padding: 20px 10%; width: 100%;
+  figure { display: table-cell; vertical-align: middle; width: 20%;
+    .image { border: 10px solid $color-grey-light; max-width: 160px; position: relative;
+      img { display: block; width: 100%; }
+    }
+  }
+  .cite { display: table-cell; vertical-align: middle; padding-left: 30px;
+    p { font-size: 24px; line-height: 28px; }
+    footer { color: $color-default; }
+  }
+}
+
+.owl-carousel {
+  .owl-pagination { text-align: center;
+    .owl-page { @include border-radius(50%); @include transition(.4s); background-color: rgba(0,0,0,.3); display: inline-block; height: 10px; margin-right: 5px; width: 10px;
+      &:hover { background-color: rgba(0,0,0,.5); }
+      &.active { background-color: rgba(0,0,0,.6); }
+    }
+  }
+}
+
+/****
+  V
+****/
+
+// Video
+
+.video { visibility: hidden;
+  // if video is Vimeo iframe
+  iframe { margin-bottom: -5px; }
+}

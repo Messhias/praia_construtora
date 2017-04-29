@@ -1,0 +1,61 @@
+// Buttons
+
+.btn, button { @include transition(.2s); @include border-radius(3px); @include box-shadow(0px 1px 0px 0px rgba(255,255,255,.2) inset ); background-color: $color-default; border: none; color: #fff; font-weight: bold; outline: none !important;
+  &:hover, &:active, &:focus { color: #fff; background-color: darken($color-default, 3%); }
+
+  &.btn-framed { background-color: transparent; border: 2px solid $color-grey-light; color: $color-grey-dark; font-weight: bold; text-decoration: none;
+    &:hover { background-color: $color-grey-light; }
+    .fa { color: $color-default; margin-left: 5px; }
+  }
+
+  &.btn-large { padding: 15px 20px; }
+}
+
+.btn-link { color: $color-grey-dark; font-weight: bold; text-decoration: none;
+
+}
+
+.form-group { position: relative; }
+
+// Form slider
+
+.form-slider-wrapper { @include opacity(.98); background-color: #232323; bottom: -110px; display: table; height: auto; padding: 30px 30px 15px 30px; position: absolute; width: 360px; z-index: 10;
+  h1 { margin-top: 0; }
+  h3 { margin: 0;
+    &:after { display: none; }
+  }
+  hr { @include opacity(.2); margin: 20px 0; }
+  .btn { font-size: 18px; margin-top: 10px; padding: 15px;  width: 100%; position: relative; }
+  figure { @include opacity(.6); }
+}
+
+#form-one-field {
+  .form-control { @include border-left-radius(3px); font-size: 18px; padding: 20px; }
+  .btn { @include border-left-radius(0px); padding: 21px; }
+  &.hide {
+    .input-group { display: none; }
+  }
+  #form-one-field-status { line-height: 60px;
+
+  }
+}
+
+// Form Status
+
+form {
+  #form-status { color: #fff; line-height: 45px; position: relative; top: -10px;
+    #valid { position: relative; top: -10px;
+      .icon { font-size: 24px; margin-right: 10px; vertical-align: middle; }
+    }
+    #invalid { color: red; position: relative; top: -10px; }
+  }
+  label.error { background-color: red; bottom: -30px; color: #fff;  font-size: 12px; left: 0;  padding: 5px; position: absolute; z-index: 2;
+    &:before { border-style: solid; border-width: 0 3.5px 5px 3.5px; border-color: transparent transparent red transparent; content: ""; height: 0px; left: 5px; position: absolute; top: -5px; width: 0px; }
+  }
+}
+
+// Inputs
+
+input[type="text"],input[type="email"], input[type="search"], input[type="password"], input[type="number"], textarea, .form-control { @include border-radius(0px); @include box-shadow(none); border: none; height: inherit; padding: 12px;
+  &:focus, &:active { @include box-shadow(none);  }
+}

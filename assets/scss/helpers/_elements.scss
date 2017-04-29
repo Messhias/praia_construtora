@@ -1,0 +1,10 @@
+a { @include transition(.2s); outline: none !important; }
+body { background-color: #fff; color: $color-grey-dark; font-family: "Arial", sans-serif; font-size: 14px; }
+h1 { font-size: 48px; font-weight: bold; }
+h2 { font-size: 36px; font-weight: bold; }
+h3 { font-size: 24px; font-weight: bold; margin-bottom: 35px; margin-top: 10px; position: relative;
+  &:after { background-color: #bcbcbc; bottom: -10px; content: ""; height: 2px; left: 0; width: 15px; position: absolute; z-index: 0; }
+}
+h4 { font-size: 18px; font-weight: bold; }
+hr { margin: 5px 0; }
+p { @include opacity(.7); line-height: 20px; }
