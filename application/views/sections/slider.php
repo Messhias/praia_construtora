@@ -26,7 +26,7 @@
                                 <h3 style="text-align: center;">Mais Informações:</h3>
                             </header>
                             <hr>
-                            <form role="form" id="form-slider">
+                            <form action="<?=site_url('welcome/test');?>" role="form" id="gform">
                                 <div class="form-group">
                                     <label for="name">Nome<em>*</em></label>
                                     <input type="text" class="form-control" id="name" name="name" required>

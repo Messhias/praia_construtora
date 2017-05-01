@@ -1,23 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * @package	CONTROLLER
+ * @author 	FABIO WILLIAM CONCEIÇÃO
+ * @since 	VERSION 1.0.0
+ * @filesource
+*/
+
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('template/header');
@@ -26,5 +18,20 @@ class Welcome extends CI_Controller {
 		$this->load->view("sections/want-more");
 		$this->load->view("sections/contact");
 		$this->load->view('template/footer');
+	}
+
+	public function test(){
+		
+		$ss->useSpreadsheet("My Spreadsheet");
+		// if not setting worksheet, "Sheet1" is assumed
+		// $ss->useWorksheet("worksheetName");
+		$row = array
+		(
+		"name" => "John Doe"
+		, "email" => "john@example.com"
+		, "comments" => "Hello world"
+		);
+		if ($ss->addRow($row)) echo "Form data successfully stored using Google Spreadsheet";
+		else echo "Error, unable to store spreadsheet data";
 	}
 }

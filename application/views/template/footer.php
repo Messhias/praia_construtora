@@ -17,7 +17,10 @@
 <script type="text/javascript" src="<?=site_url('assets/js/scrollReveal.min.js');?>"></script>
 <script type="text/javascript" src="<?=site_url('assets/js/smoothscroll.js');?>"></script>
 
+<script type="text/javascript" src="<?=site_url('assets/js/jquery.form.min.js');?>"></script>
+
 <script type="text/javascript" src="<?=site_url('assets/js/custom.js');?>"></script>
+
 
 </body>
 </html>
