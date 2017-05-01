@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS `real_state`.`admin` ;
 
 CREATE TABLE IF NOT EXISTS `real_state`.`admin` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `usename` VARCHAR(80) NULL,
+  `username` VARCHAR(80) NULL,
   `pass` LONGTEXT NULL,
   `active` TINYINT NULL DEFAULT 1,
   PRIMARY KEY (`id`))
@@ -57,7 +57,18 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `real_state`;
-INSERT INTO `real_state`.`admin` (`id`, `usename`, `pass`, `active`) VALUES (DEFAULT, 'admin', 'admin', 1);
+INSERT INTO `real_state`.`admin` (`id`, `username`, `pass`, `active`) VALUES (DEFAULT, 'admin', 'admin', 1);
 
 COMMIT;
+
+DROP TABLE IF EXISTS ci_sessions;
+
+
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+        `id` varchar(128) NOT NULL,
+        `ip_address` varchar(45) NOT NULL,
+        `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+        `data` blob NOT NULL,
+        KEY `ci_sessions_timestamp` (`timestamp`)
+);
 

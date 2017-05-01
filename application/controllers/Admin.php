@@ -11,8 +11,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
     
+    
+    /** 
+     * MAIN LOGIN PAGE
+     * @access	public
+     * @return 	view
+    */
     public function index(){
+        
         $this->load->view('admin/login');
     }
     
+    /** 
+     * dashboard view
+     * @access	public
+     * @return 	view
+    */
+    public function dashboard(){
+        
+    }
+       
 }

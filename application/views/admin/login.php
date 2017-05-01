@@ -11,16 +11,17 @@
     <title>Praia Atlântica - Administrador </title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=site_url('vendors/bootstrap/dist/css/bootstrap.min.css');?>" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?=site_url('vendors/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet">
     <!-- NProgress -->
-    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="<?=site_url('vendors/nprogress/nprogress.css');?>" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<?=site_url('vendors/animate.css/animate.min.css');?>" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="<?=site_url('build/css/custom.min.css');?>" rel="stylesheet">
+    <link href="<?=site_url('build/css/admin.css');?>" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -31,21 +32,24 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
-              <h1>Area administrativa</h1>
+            <form action="<?=site_url('ajax/loginAdmin');?>" 
+            method="post"
+            name='frmLoginAdmin' id='frmLoginAdmin'>
+              <h1><img src="<?=site_url('assets/img/logo.png');?>" alt="Praia Atlantica logo"></h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="true" />
+                <input type="text" class="form-control" placeholder="Username" 
+                name="username" id="username" required="true" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="true" />
+                <input type="password"
+                name="pass" id="pass" class="form-control" placeholder="Password" required="true" />
               </div>
               <div>
-                <button type='submit' class="btn btn-default submit" href="index.html">Entrar</button>
+                <button type='submit' 
+                class="btn btn-default submit">Entrar</button>
               </div>
 
               <div class="clearfix"></div>
-
-                  <h1><img src="assets/img/logo.png" alt="Praia Atlantica logo"></h1>
                   <p>© <?=date('Y');?> All Rights Reserved - Praia Atlantica</p>
                 </div>
               </div>
@@ -55,5 +59,10 @@
 
         
     </div>
+    
+<script type="text/javascript" src="<?=site_url('assets/js/jquery-2.1.0.min.js');?>"></script>
+<script type="text/javascript" src="<?=site_url('assets/js/jquery.form.min.js');?>"></script>
+<script type="text/javascript" src="<?=site_url('adm/admin.js');?>"></script>
+<div class='lmask'></div>
   </body>
 </html>
