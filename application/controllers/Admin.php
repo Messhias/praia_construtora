@@ -18,7 +18,7 @@ class Admin extends CI_Controller {
      * @return 	view
     */
     public function index(){
-        
+        $this->session->sess_destroy();
         $this->load->view('admin/login');
     }
     
@@ -28,7 +28,7 @@ class Admin extends CI_Controller {
      * @return 	view
     */
     public function dashboard(){
-        
+        $this->load->view('admin/dashboard',array('clients'=>$this->client_model->all()));
     }
        
 }

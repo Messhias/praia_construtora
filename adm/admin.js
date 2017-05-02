@@ -1,5 +1,5 @@
-var site_url = "http://localhost/praia_construtora/";
-
+//var site_url = "http://localhost/praia_construtora/";
+var site_url = "http://wtsolucoesdigitais.com/atlantica/";
 
 $(document).ready(function() {
 

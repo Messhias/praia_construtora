@@ -7,23 +7,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
--- -----------------------------------------------------
--- Schema real_state
--- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `real_state` ;
 
 -- -----------------------------------------------------
--- Schema real_state
+-- Table `client`
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `real_state` DEFAULT CHARACTER SET utf8 ;
-USE `real_state` ;
+DROP TABLE IF EXISTS `client` ;
 
--- -----------------------------------------------------
--- Table `real_state`.`client`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `real_state`.`client` ;
-
-CREATE TABLE IF NOT EXISTS `real_state`.`client` (
+CREATE TABLE IF NOT EXISTS `client` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(80) NULL,
   `email` VARCHAR(45) NULL,
@@ -35,11 +25,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `real_state`.`admin`
+-- Table `admin`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `real_state`.`admin` ;
+DROP TABLE IF EXISTS `admin` ;
 
-CREATE TABLE IF NOT EXISTS `real_state`.`admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(80) NULL,
   `pass` LONGTEXT NULL,
@@ -53,11 +43,11 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `real_state`.`admin`
+-- Data for table `admin`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `real_state`;
-INSERT INTO `real_state`.`admin` (`id`, `username`, `pass`, `active`) VALUES (DEFAULT, 'admin', 'admin', 1);
+INSERT INTO `admin` (`id`, `username`, `pass`, `active`) VALUES (DEFAULT, 'admin', 'admin', 1);
 
 COMMIT;
 
@@ -72,3 +62,10 @@ CREATE TABLE IF NOT EXISTS `ci_sessions` (
         KEY `ci_sessions_timestamp` (`timestamp`)
 );
 
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+        `id` varchar(128) NOT NULL,
+        `ip_address` varchar(45) NOT NULL,
+        `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+        `data` blob NOT NULL,
+        KEY `ci_sessions_timestamp` (`timestamp`)
+);

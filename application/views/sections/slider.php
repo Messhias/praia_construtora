@@ -26,18 +26,21 @@
                                 <h3 style="text-align: center;">Mais Informações:</h3>
                             </header>
                             <hr>
-                            <form action="<?=site_url('welcome/test');?>" role="form" id="gform">
+                            <form action="<?=site_url('welcome/sendInformation');?>" 
+                            method = "post"
+                            name='infoForm'
+                            role="form" id="infoForm">
                                 <div class="form-group">
                                     <label for="name">Nome<em>*</em></label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
+                                    <input type="text" class="form-control" id="name" name="name" >
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="email">Email<em>*</em></label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <input type="email" class="form-control" id="email" name="email" >
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="phone">Telefone<em>*</em></label>
-                                    <input type="text" class="form-control" id="phone" name="phone" required>
+                                    <input type="text" class="form-control" id="phone" name="phone" >
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="obs">Observações</label>

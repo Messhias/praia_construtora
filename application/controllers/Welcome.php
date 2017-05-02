@@ -20,18 +20,18 @@ class Welcome extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function test(){
-		
-		$ss->useSpreadsheet("My Spreadsheet");
-		// if not setting worksheet, "Sheet1" is assumed
-		// $ss->useWorksheet("worksheetName");
-		$row = array
-		(
-		"name" => "John Doe"
-		, "email" => "john@example.com"
-		, "comments" => "Hello world"
+	public function sendInformation(){
+		$insert = array(
+			'name'			=>	$this->input->post('name'),
+			'telphone'		=>	$this->input->post('phone'),
+			'email'			=>	$this->input->post('email'),
+			'observation'	=>	$this->input->post('obs'),
 		);
-		if ($ss->addRow($row)) echo "Form data successfully stored using Google Spreadsheet";
-		else echo "Error, unable to store spreadsheet data";
+
+		if($this->client_model->insert($insert)){
+			redirect("/");
+		}else{
+			redirect('/');
+		}
 	}
 }

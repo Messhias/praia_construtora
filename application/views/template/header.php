@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?=site_url('assets/css/flexslider.css');?>" type="text/css">
 
     <link rel="stylesheet" href="<?=site_url('assets/css/style.css')?>" type="text/css">
+    <link rel="stylesheet" href="<?=site_url('/css/main.css')?>" type="text/css">
 
     <title>Praias Construtora</title>
 
