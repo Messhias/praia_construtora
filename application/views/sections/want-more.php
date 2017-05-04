@@ -7,7 +7,10 @@
                 </div><!-- /.col-md-8 -->
                 <div class="col-md-8 col-sm-8">
                     
-                     <form role="form" id="form-slider">
+                     <form action='<?=site_url('welcome/downloadPlant');?>' 
+                     name='form-slider' method='post'
+                     enctype="multipart/form-data"
+                     id="form-slider">
                                 <div class="form-group">
                                     <label for="email">Email<em>*</em></label>
                                     <input type="email" class="form-control" id="email" name="email" required='true'>

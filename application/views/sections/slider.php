@@ -27,9 +27,9 @@
                             </header>
                             <hr>
                             <form action="<?=site_url('welcome/sendInformation');?>" 
-                            method = "post"
+                            method = "post" enctype="multipart/form-data"
                             name='infoForm'
-                            role="form" id="infoForm">
+                            id="infoForm">
                                 <div class="form-group">
                                     <label for="name">Nome<em>*</em></label>
                                     <input type="text" class="form-control" id="name" name="name" >
@@ -44,7 +44,7 @@
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="obs">Observações</label>
-                                    <textarea id="obs" rows="3" cols="30" style="color: black;" placeholder="Olá, gostaria de receber mais informações sobre o Viva Feliz."></textarea>
+                                    <textarea id="obs" name='obs' rows="3" cols="30" style="color: black;" placeholder="Olá, gostaria de receber mais informações sobre o Viva Feliz."></textarea>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <div id="form-slider-status"></div>

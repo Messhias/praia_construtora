@@ -1,5 +1,6 @@
 //var site_url = "http://localhost/praia_construtora/";
-var site_url = "http://wtsolucoesdigitais.com/atlantica/";
+//var site_url = "http://wtsolucoesdigitais.com/atlantica/";
+var site_url = "http://atlanticaguaruja.com.br/";
 
 $(document).ready(function() {
 

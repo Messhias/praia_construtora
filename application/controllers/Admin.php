@@ -28,7 +28,14 @@ class Admin extends CI_Controller {
      * @return 	view
     */
     public function dashboard(){
-        $this->load->view('admin/dashboard',array('clients'=>$this->client_model->all()));
+
+        $this->load->view('admin/dashboard',array(
+                'clients'       =>  $this->client_model->all(),
+                'plant_request' =>  $this->plant_request_model->all(),
+                'contact_form'  =>  $this->contact_form_model->all(),
+            )
+        );
+
     }
        
 }

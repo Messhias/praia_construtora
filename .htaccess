@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
  	RewriteEngine on
-	RewriteBase /praia_construtora/
+	RewriteBase /
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^(.*)$ /praia_construtora/index.php?/$1 [L] 
+	RewriteRule ^(.*)$ /index.php?/$1 [L] 
 </IfModule>

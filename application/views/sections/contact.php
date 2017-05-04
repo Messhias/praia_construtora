@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-8 col-sm-8">
                     <header><h3>Formulário de Contato</h3></header>
-                    <form role="form" id="form-contact" method="post" action="">
+                    <form role="form" id="form-contact" name="form-contact" method="post" action="<?=site_url('welcome/contact');?>">
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">

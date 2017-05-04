@@ -24,7 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost/praia_construtora/';
-$config['base_url'] = "http://www.wtsolucoesdigitais.com/atlantica/";
+//$config['base_url'] = "http://www.wtsolucoesdigitais.com/atlantica/";
+$config['base_url'] = "http://atlanticaguaruja.com.br/";
 
 /*
 |--------------------------------------------------------------------------
