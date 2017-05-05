@@ -14,12 +14,13 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-8">
                         <div class="title">
-                            <h2 style="color: #fff;">2 e 3 dormitórios <span style="font-weight: lighter;">na Riviera</span></h2>
-                            <figure class="subtitle" style="color: #fff;">Sua casa de campo da praia</figure>
+                            <h2 style="color: #fff;">2 e 3 dormitórios <span style="font-weight: lighter;">no Guarujá</span></h2>
+                            <figure class="subtitle" style="color: #fff;">Lazer completo</figure>
                             <figure class="subtitle" style="color: #fff;"></figure>
-                            <i class="fa fa-arrow-circle-o-right"></i>
+                            <i class="fa fa-arrow-circle-o-right" style="color: #fff;"></i>
                         </div><!-- /.title -->
                     </div><!-- /.col-md-8 -->
+
                     <div class="col-md-4 col-sm-4">
                         <div class="form-slider-wrapper form-has-parallax">
                             <header>
@@ -44,7 +45,8 @@
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="obs">Observações</label>
-                                    <textarea id="obs" name='obs' rows="3" cols="30" style="color: black;" placeholder="Olá, gostaria de receber mais informações sobre o Viva Feliz."></textarea>
+                                    <textarea id="obs" name='obs' rows="3" cols="30" style="color: black;" 
+                                    placeholder="Olá, gostaria de receber mais informações sobre o Atlântica Ocean View."></textarea>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <div id="form-slider-status"></div>
