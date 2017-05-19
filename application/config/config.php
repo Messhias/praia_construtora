@@ -23,9 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'http://localhost/praia_construtora/';
+$config['base_url'] = 'http://localhost/praia_construtora/';
 //$config['base_url'] = "http://www.wtsolucoesdigitais.com/atlantica/";
-$config['base_url'] = "http://atlanticaguaruja.com.br/";
+// $config['base_url'] = "http://atlanticaguaruja.com.br/";
 
 /*
 |--------------------------------------------------------------------------

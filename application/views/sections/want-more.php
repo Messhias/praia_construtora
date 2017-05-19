@@ -1,6 +1,6 @@
 <section id="features" class="block">
         <div class="container">
-            <header><h3>Quer mais?</h3></header>
+            <header><h3>Baixar plantas</h3></header>
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <h4>Faça o download das plantas do empreendimento!</h4>
@@ -13,7 +13,7 @@
                      id="form-slider">
                                 <div class="form-group">
                                     <label for="email">Email<em>*</em></label>
-                                    <input type="email" class="form-control" id="email" name="email" required='true'>
+                                    <input type="email" class="form-control want-more-input-text" id="email" name="email" required='true'>
                                 </div><!-- /.form-group -->
                              
                                 <div class="form-group">

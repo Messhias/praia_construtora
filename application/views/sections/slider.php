@@ -5,8 +5,8 @@
                 <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide1.jpg');?>" class="parallax-bg" alt=""></li>
                 <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide2.jpg');?>" class="parallax-bg" alt=""></li>
                 <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide3.jpg');?>" class="parallax-bg" alt=""></li>
-                <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide4.jpg');?>" class="parallax-bg" alt=""></li>
-                <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide5.jpg');?>" class="parallax-bg" alt=""></li>
+                <!-- <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide4.jpg');?>" class="parallax-bg" alt=""></li>
+                <li class="slide slide-has-parallax"><img src="<?=site_url('assets/img/slide5.jpg');?>" class="parallax-bg" alt=""></li> -->
             </ul><!-- /.slides -->
         </div><!-- /.flexslider -->
         <div class="slider-banner">
