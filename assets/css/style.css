@@ -1166,6 +1166,8 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
   padding: 12px;
 
 }
+
+
 input[type="text"]:focus, input[type="text"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="number"]:focus, input[type="number"]:active, textarea:focus, textarea:active, .form-control:focus, .form-control:active {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;

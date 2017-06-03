@@ -13,11 +13,10 @@
                      id="form-slider">
                                 <div class="form-group">
                                     <label for="email">Email<em>*</em></label>
-                                    <input type="email" class="form-control want-more-input-text" id="email" name="email" required='true'>
+                                    <input type="email" class="want-more-input-text form-control " id="email" name="email" required='true' required>
                                 </div><!-- /.form-group -->
                              
                                 <div class="form-group">
-                                    <div id="form-slider-status"></div>
                                     <button type="submit" id="form-slider-submit" class="btn btn-default">Enviar</button>
                                 </div><!-- /.form-group -->
                             </form><!-- /#form-slider -->

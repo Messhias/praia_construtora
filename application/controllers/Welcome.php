@@ -42,7 +42,7 @@ class Welcome extends CI_Controller {
         $this->email->from($this->input->post('email'));
         $this->email->to("praias@praias.com");
         $this->email->cc("enzo@praias.com");
-        $this->email->subject('Praia Atlântica - Download das plantas');
+        $this->email->subject('Praia Atlântica - Informações');
         $this->email->message($message);
 		if($this->email->send()){
 

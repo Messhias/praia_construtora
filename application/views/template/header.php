@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="<?=site_url('assets/css/flexslider.css');?>" type="text/css">
 
     <link rel="stylesheet" href="<?=site_url('assets/css/style.css')?>" type="text/css">
-    <link rel="stylesheet" href="<?=site_url('/css/main.css')?>" type="text/css">
 
 
     <link rel="stylesheet" href="<?=site_url('assets/bootstrap/css/bootstrap.css')?>" type="text/css">
     <link rel="stylesheet" href="<?=site_url('assets/css/owl.carousel.css')?>" type="text/css">
     <link href="<?=site_url('assets/fonts/font-awesome-4.0.3/css/font-awesome.min.css');?>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?=site_url('/css/main.css')?>" type="text/css">
 </head>
 
 <body data-spy="scroll" data-target=".navigation" data-offset="90">

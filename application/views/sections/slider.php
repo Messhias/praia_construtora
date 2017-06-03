@@ -33,20 +33,20 @@
                             id="infoForm">
                                 <div class="form-group">
                                     <label for="name">Nome<em>*</em></label>
-                                    <input type="text" class="form-control" id="name" name="name" >
+                                    <input type="text" class="form-control" id="name" name="name" required>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="email">Email<em>*</em></label>
-                                    <input type="email" class="form-control" id="email" name="email" >
+                                    <input type="email" class="form-control" id="email" name="email" required>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="phone">Telefone<em>*</em></label>
-                                    <input type="text" class="form-control" id="phone" name="phone" >
+                                    <input type="text" class="form-control" id="phone" name="phone" required>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <label for="obs">Observações</label>
                                     <textarea id="obs" name='obs' rows="3" cols="30" style="color: black;" 
-                                    placeholder="Olá, gostaria de receber mais informações sobre o Atlântica Ocean View."></textarea>
+                                    placeholder="Olá, gostaria de receber mais informações sobre o Atlântica Ocean View." required></textarea>
                                 </div><!-- /.form-group -->
                                 <div class="form-group">
                                     <div id="form-slider-status"></div>
